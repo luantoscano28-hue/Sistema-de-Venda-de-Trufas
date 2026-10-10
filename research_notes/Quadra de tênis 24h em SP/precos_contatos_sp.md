@@ -184,7 +184,7 @@ Quase todos os locais da Zona Oeste (Leal Tênis, Play Tennis Jardim das Perdize
 
 ### Cited Findings
 - Parque Villa-Lobos: "todos os dias, das 5h30 às 19h (inclusive feriados)", gratuito, levando equipamento próprio. — [Visite São Paulo](https://visitesaopaulo.com/quadras-de-tenis-locais-para-praticar-o-esporte-gratuitamente/)
-- Parque Jacintho Alberto: "todos os dias, das 6h30 às 18h", segundo extrato de guia. — [Visite São Paulo](https://visitesaopaulo.com/quadras-de-tenis-locais-para-praticar-o-esporte-gratuitamente/)
+- Parque Jacintho Alberto (Pirituba/ZN): "todos os dias, das 6h30 às 18h", segundo extrato de guia. A atribuição ao Visite São Paulo é provável, mas o extrato misturava fontes. — [Visite São Paulo](https://visitesaopaulo.com/quadras-de-tenis-locais-para-praticar-o-esporte-gratuitamente/)
 - Tennis Lounge Moema: "Seg - Sex: 6:00 - 00:00, Sáb - Dom: 7:00 - 22:00". — [tennislounge.com.br/moema](https://www.tennislounge.com.br/moema)
 - Leal Tênis (Vila Leopoldina): Seg–Sex 6h–23h, Sáb 7h–18h, Dom 8h–15h. Outra página fala em 6h–23h todos os dias para algumas unidades. — [lealtenis.com.br/vila-leopoldina](https://www.lealtenis.com.br/vila-leopoldina)
 - Tennis Experience: Seg–Sex 06:00–23:00; Sáb 07:00–18:00 (página de locação) ou 08:00–18:00 (página de contato). — [locação](https://tennisexperience.com.br/locacao/); [contato](https://tennisexperience.com.br/contato/)
@@ -276,7 +276,7 @@ Na ponta de baixo há uma rede pública **gratuita** relevante, mas só de dia e
 - Villa-Lobos, regras relatadas por usuários (não oficiais; ~2024): a administração passou a exigir agendamento, com limite de 1h por dia por CPF; antes valia cerca de 40 min ou 6 games por partida. — [Reclame Aqui](https://www.reclameaqui.com.br/parque-villa-lobos/absurdo-administracao-regra-uso-de-quadra-de-tenis_gj7ne9gBxy9onchc/); [Reclame Aqui 2](https://www.reclameaqui.com.br/parque-villa-lobos/quadras-com-reservas_ZfvvFdd0L-9s8Azl/)
 - Parque Ibirapuera: duas quadras de saibro, gratuitas, por ordem de chegada.
   - Data de abertura em conflito: "em 2024" — [Encontra Jardim Anália Franco](https://www.encontrajardimanaliafranco.com.br/15-lugares-e-quadras-para-jogar-tenis-de-graca-em-sao-paulo/); "inauguradas em junho/2023" — [Tênis Curitiba](https://teniscuritiba.com.br/quadra-de-tenis-em-sao-paulo/)
-  - Um extrato diz que foram inauguradas pela Renault em parceria com a Urbia. — [Visite São Paulo](https://visitesaopaulo.com/quadras-de-tenis-locais-para-praticar-o-esporte-gratuitamente/)
+  - Um extrato diz que foram inauguradas pela Renault em parceria com a Urbia. A atribuição exata é incerta: a informação veio de uma busca que reuniu estas duas fontes. — [Visite São Paulo](https://visitesaopaulo.com/quadras-de-tenis-locais-para-praticar-o-esporte-gratuitamente/); [ABCdoABC](https://abcdoabc.com.br/sp-leva-aulas-gratuitas-de-tenis-para-escolas-e-centros-esportivos/)
 - Centro Esportivo Ibirapuera: 6 quadras no programa de tênis da Prefeitura, "abertas à população geral". — [ABCdoABC](https://abcdoabc.com.br/sp-leva-aulas-gratuitas-de-tenis-para-escolas-e-centros-esportivos/)
 - CE Tietê: 4 quadras de saibro. — [Tênis Curitiba](https://teniscuritiba.com.br/quadra-de-tenis-em-sao-paulo/)
   - Quadras reinauguradas. — [Prefeitura SP](https://prefeitura.sp.gov.br/web/esportes/w/noticias/262058)

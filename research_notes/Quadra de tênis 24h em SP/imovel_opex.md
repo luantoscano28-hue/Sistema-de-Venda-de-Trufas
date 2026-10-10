@@ -5,7 +5,7 @@
 ## 1. What does it cost per month to rent a 700–3,000 m² terreno or galpão in each candidate region? (listing examples with URLs)
 
 ### Takeaway
-Across the city, asking rents for 700–3,000 m² galpões mostly fall between **R$ 25 and R$ 35/m²/mês** before IPTU. Zona Oeste has a slightly wider range (R$ 21–42/m²). Logistics-grade galpões with high ceilings near Av. do Estado and Parque da Mooca ask **R$ 45–64/m²**. IPTU adds roughly **R$ 1–6/m²/mês**, and condo galpões also charge condomínio of R$ 5–7/m². Terrenos are cheaper per m², at R$ 15–27/m² in the few examples found (Mooca, Vila Carrão), but they need a structure built on them. Very few galpões listed a pé direito of 10 m or more (Jaguaré 12 m, Parque da Mooca 10 m, Barra Funda 12 m on 4,500 m²). Most listed 5–8 m.
+Across the city, asking rents for 700–3,000 m² galpões mostly fall between **R$ 25 and R$ 35/m²/mês** before IPTU (10 of the 17 priced examples in that size range). Zona Oeste examples run from R$ 21 to R$ 42/m². Logistics-grade galpões with high ceilings near Av. do Estado and Parque da Mooca ask **R$ 45–64/m²**. IPTU adds roughly **R$ 1–6/m²/mês**, and condo galpões also charge condomínio of R$ 5–7/m². Terrenos are cheaper per m², at R$ 15–27/m² in the few examples found (Vila Carrão, plus Mooca where the price comes from the URL only), but they need a structure built on them. Very few galpões listed a pé direito of 10 m or more (Jaguaré 12 m, Parque da Mooca 10 m, Barra Funda 12 m on 4,500 m²). Most listed 5–8 m.
 
 ### Cited Findings
 
@@ -30,12 +30,12 @@ Across the city, asking rents for 700–3,000 m² galpões mostly fall between *
 | 15 | ZO – Jaguaré | Condomínio de galpões (modules of 2,000–15,300 m²) | ≥ 2,000 | 134,000 (scope unclear, probably not a single 2,000 m² module) | n/i | n/i | 6–8.3 m livre | – | | Probably [Galpão Aluguel e Venda – CLJ Jaguaré](https://galpaoaluguelevenda.com.br/galpao/galpoes-para-alugar-em-sao-paulo-cl-jaguare/) (attribution inferred from search results) |
 | 16 | ZL – Mooca (Av. do Estado) | Galpão | 1,882 | 120,000 | 7,633.33 | – | n/i | 63.76 | | [Imovelweb – Mooca](https://www.imovelweb.com.br/comerciais-galpao-deposito-barracao-aluguel-mooca.html) / [Chaves na Mão – Mooca](https://www.chavesnamao.com.br/galpao-para-alugar/sp-sao-paulo/mooca/) (portal search pages) |
 | 17 | ZL – Parque da Mooca | Galpão logístico | 2,000 | 90,000 | 3,600 | – | 10 m (possibly the same listing) | 45.00 | | [Zap – Parque da Mooca](https://www.zapimoveis.com.br/aluguel/galpao-deposito-armazem/sp+sao-paulo+zona-leste+pq-da-mooca/); [Chaves na Mão – Parque da Mooca](https://www.chavesnamao.com.br/galpao-para-alugar/sp-sao-paulo/parque-da-mooca/) |
-| 18 | ZL – Mooca | Galpão | ~1,459 | n/i | n/i | – | n/i (another Mooca listing shows 7.00 m) | – | Zoning ZPI-1 (Zona Predominantemente Industrial) | [Imovelweb – Mooca](https://www.imovelweb.com.br/comerciais-galpao-deposito-barracao-aluguel-mooca.html) / [VivaReal – Mooca](https://www.vivareal.com.br/aluguel/sp/sao-paulo/zona-leste/mooca/galpao_comercial/) |
+| 18 | ZL – Mooca | Galpão | ~1,459 | n/i | n/i | – | n/i (another Mooca listing shows 7.00 m) | – | Zoning ZPI-1 (Zona Predominantemente Industrial) | [Imovelweb – Mooca](https://www.imovelweb.com.br/comerciais-galpao-deposito-barracao-aluguel-mooca.html) / [VivaReal – Mooca](https://www.vivareal.com.br/aluguel/sp/sao-paulo/zona-leste/mooca/galpao_comercial/) (extract did not say which portal) |
 | 19 | ZL – Mooca | Galpões of 400–600 m² | 400–600 | 12,000–20,000 | 1,200–2,100 | – | n/i | about 30–33 | Below the target size | Same Mooca pages |
 | 20 | ZS – Santo Amaro (Rua Carlos Gomes) | Galpão | 1,500 | 59,000 | n/i | – | n/i | 39.33 | 10 parking spaces | [VivaReal – Santo Amaro](https://www.vivareal.com.br/aluguel/sp/sao-paulo/zona-sul/santo-amaro/galpao_comercial/) |
 | 21 | ZS – Jardim Caravelas (Santo Amaro area) | Galpão | 1,500 | 40,000 | n/i | – | n/i | 26.67 | | [Imovelweb – Santo Amaro](https://www.imovelweb.com.br/comerciais-galpao-deposito-barracao-aluguel-santo-amaro-sao-paulo.html) / [Mitula – Santo Amaro](https://imoveis.mitula.com.br/imoveis/aluguel-galpoes-santo-amaro) (extract did not specify) |
 | 22 | ZS – Vila Socorro | Galpão industrial | 1,736 | 59,000–60,000 (varies by portal) | n/i | – | **8.5 m (higher section) / 5 m** | 33.99–34.56 | | [Lopes – Capela do Socorro](https://www.lopes.com.br/busca/aluguel/br/sp/sao-paulo/capela-do-socorro/tipo/galpao) (probable; extract did not specify) |
-| 23 | ZS – Santo Amaro | Galpões modulares of 500–1,100 m² in a condomínio | 500–1,100 | n/i | n/i | n/i | 6 m vão livre; other Santo Amaro galpões listed at 8 m | – | Advertised range for the area was about R$ 15,000–60,000/month | [Imovelweb – Santo Amaro](https://www.imovelweb.com.br/comerciais-galpao-deposito-barracao-aluguel-santo-amaro-sao-paulo.html) |
+| 23 | ZS – Santo Amaro | Galpões modulares of 500–1,100 m² in a condomínio | 500–1,100 | n/i | n/i | n/i | 6 m vão livre; other Santo Amaro galpões listed at 8 m | – | Advertised range for the area was about R$ 15,000–60,000/month | Santo Amaro portal pages, e.g. [Imovelweb – Santo Amaro](https://www.imovelweb.com.br/comerciais-galpao-deposito-barracao-aluguel-santo-amaro-sao-paulo.html) / [SuaQuadra – Santo Amaro galpão](https://www.suaquadra.com.br/alugar/ponto-comercial/sp/sao-paulo/santo-amaro/galpao) (extract did not say which portal) |
 | 24 | ZN – Vila Guilherme | Building/galpão on 3 floors | ~1,050 | 32,000 | ~2,204 | – | n/i | 30.48 | Multi-floor | [Rhodia Imóveis](https://www.rhodiaimoveis.com.br/alugar/sp/sao-paulo/vila-guilherme/galpao/70808658) |
 | 25 | ZN – Vila Guilherme | Galpão on 3 floors | 1,439 | 40,000 | 4,534 (the page also says IPTU is included, a conflict) | – | 5 m on the 1st floor | 27.80 | Multi-floor | [Rhodia Imóveis](https://www.rhodiaimoveis.com.br/alugar/sp/sao-paulo/vila-guilherme/galpao/70808658); [New Brokers GA1025](https://www.newbrokers.com.br/imovel/galpao-barracao/locacao/sao-paulo/sp/vila-guilherme/GA1025_NBNI) |
 | 26 | ZN – Vila Guilherme | Galpão | 1,073 | 27,000 | n/i | – | n/i | 25.16 | | [Ouro Vallota](https://www.ourovallota.com.br/imoveis/para-alugar/galpao+terreno/sao-paulo/vila-guilherme) |
@@ -75,7 +75,7 @@ Across the city, asking rents for 700–3,000 m² galpões mostly fall between *
 | Terrenos | R$ 14.7–26.7/m² | — | #29 (Vila Carrão) and #30 (Mooca, URL slug only, unverified) |
 
 - **The "cheaper zones" were not consistently cheaper in this sample.** Vila Leopoldina showed the lowest galpão asks (R$ 21–24/m²), while the large Mooca logistics galpões were the most expensive. The best predictors of price per m² look like asset quality (logistics spec, high ceiling, condo services) and size, more than the zone.
-- **IPTU** in the listings that gave it was **R$ 1.2–5.9/m²/mês**, mostly R$ 3.8–5.9. Condo galpões also charge **R$ 5–7/m²** of condomínio (#13, #14). For the model, all-in occupancy cost runs from about R$ 28 to R$ 48/m²/mês for ordinary galpões. Real all-in examples: Barra Funda 2,608 m² at R$ 92k/month (#1) and Jaguaré 2,800 m² at R$ 95.8k/month (#13).
+- **IPTU** in the 14 listings that gave it was **R$ 1.2–5.9/m²/mês**. About half fall between R$ 3.8 and 5.9; the rest are R$ 1.2–3.4. Condo galpões also charge **R$ 5–7/m²** of condomínio (#13, #14). For the model, all-in occupancy cost runs from about R$ 28 to R$ 48/m²/mês for ordinary galpões. Real all-in examples: Barra Funda 2,608 m² at R$ 92k/month (#1) and Jaguaré 2,800 m² at R$ 95.8k/month (#13).
 - **Illustrative monthly budgets** at R$ 25–35/m² rent plus R$ 2–5/m² IPTU. The area per court follows the brief (about 700 m² for one court); I did not verify court footprints.
 
   | Courts | Area | Rent/month | IPTU/month |
@@ -118,7 +118,7 @@ From 4 Jul 2026, the ANEEL B3 tariff for Enel SP is **R$ 0.78938/kWh before taxe
 - Components — [Enel tariff page](https://www.enel.com.br/pt-saopaulo/Para_Voce/tarifa-energia-eletrica.html):
   - TUSD: 997.85 ponta, 682.59 intermediário, 367.33 fora ponta
   - TE: 482.45 ponta, 301.91 intermediário, 301.91 fora ponta
-- That gives **ponta R$ 1.480, intermediário R$ 0.985, fora ponta R$ 0.669 per kWh** before taxes. Calculadora de Energia shows the same three values next to a convencional of R$ 0.789 — [Calculadora de Energia](https://calculadoraenergia.com.br/guias/tarifa-branca)
+- That gives **ponta R$ 1.480, intermediário R$ 0.985, fora ponta R$ 0.669 per kWh** before taxes. Calculadora de Energia shows the same three values next to a convencional of R$ 0.789 in force since 04/07/2026 — [Calculadora de Energia – Enel SP](https://calculadoraenergia.com.br/tarifa/enel-sp) / [Calculadora de Energia – tarifa branca guide](https://calculadoraenergia.com.br/guias/tarifa-branca)
 - **Hours (Enel SP):**
   - Ponta: 17h30–20h30
   - Intermediário: 16h30–17h30 and 20h30–21h30
@@ -196,7 +196,7 @@ A receptionist (CBO 4221-05) earns about **R$ 1,930–2,090/month** in São Paul
 - The Glassdoor page figures were malformed and were excluded — [Glassdoor](https://www.glassdoor.com.br/Sal%C3%A1rios/s%C3%A3o-paulo-sp-recepcionista-sal%C3%A1rio-SRCH_IL.0,12_IC2479061_KO13,26.htm)
 
 **Porteiro, controlador de acesso and zelador (proxies for night attendant and court maintenance)**
-- **SINDEEPRES** (termo aditivo CCT 2026, from 01/01/2026): **porteiro/controlador de acesso R$ 2,031.57; zelador R$ 2,144.33** — [SINDEEPRES PDF](https://sindeepres.org.br/wp-content/uploads/2026/03/porteiros2026.pdf)
+- **SINDEEPRES** (termo aditivo CCT 2026, from 01/01/2026): **porteiro/controlador de acesso R$ 2,031.57; zelador R$ 2,144.33**. The extract mentions "com acúmulo de função" next to these pisos; confirm which roles it covers — [SINDEEPRES PDF](https://sindeepres.org.br/wp-content/uploads/2026/03/porteiros2026.pdf)
   - The porteiro value is confirmed by [Empresas de Terceirização](https://empresasdeterceirizacao.com.br/dissidio-de-portaria-em-sp-info/)
   - A legal guide reports a **6.25%** reajuste for salaries up to R$ 7,380.07 — [Torezan Vilanova](https://torezanvilanova.com/piso-salarial-porteiro-2026-sp/)
 - **Sindifícios** (condomínios, SP), CCT 2025/2026: **zelador R$ 2,188.18; porteiro R$ 2,004.02**. The table in force from Oct/2025 lists porteiro at **R$ 2,096.09** — [Sindifícios CCT PDF](https://sindificios.com.br/site/wp-content/uploads/2025/09/CCT-2025-2026.pdf); [SíndicoNet](https://www.sindiconet.com.br/informese/convencao-coletiva-sindificios-2025-2026-noticias-obrigacoes)
@@ -266,7 +266,7 @@ A Brazilian article lists 6 court-booking platforms — [Novo Esporte](https://n
 - Playtomic charges players a **service fee** on online transactions, varying by country. Players on its Premium plan pay no booking fee — [Playtomic player help: Service Fee](https://playerhelp.playtomic.com/hc/en-gb/articles/19831779272337-Service-Fee)
 - The Playtomic Coach web app is a separate paid add-on, priced by number of coaches; no price was shown — [Playtomic Manager help](https://helpmanager.playtomic.com/hc/en-gb/articles/45335085102481-Playtomic-Coach-web-app)
 
-**Payment fees (Pix and card), 2026.** These come from comparison and affiliate sites and differ between sources.
+**Payment fees (Pix and card), 2026.** These come from comparison and affiliate sites and differ between sources. The search extract did not always say which comparator page gave which figure, so the per-row source is approximate. The InfinitePay "above R$ 80k/month" tier is from InfinitePay's own blog.
 
 | Provider | Débito | Crédito à vista | Crédito 12x | Pix | Source |
 |---|---|---|---|---|---|
@@ -328,7 +328,7 @@ CNAE **9311-5/00 (Gestão de instalações de esportes)** is taxed under **Simpl
   - Treated in **Anexo III**, with an initial rate of 6% — [Contabilidade.com – CNAE 9311-5/00](https://contabilidade.com/blog/cnae-9311500-gestao-de-instalacoes-de-esportes-simples-nacional-e-abertura-de-empresa/)
   - Not subject to Fator R and not allowed for MEI — [ContaÁgil – CNAE 9311500](https://www.contaagil.com/consulta-cnae/cnae/?cod=9311500); [Ever Contábil](https://evercontabil.com.br/cnae/9311500-gestao-de-instalacoes-de-esportes/)
   - One page gives the legal basis as LC 123 art. 18 §5º-F; another lists Resolução CGSN 140/2018 among its sources. A page citing Resolução CGSN 94/2011 looks outdated — [Contabilidade.com](https://contabilidade.com/blog/cnae-9311500-gestao-de-instalacoes-de-esportes-simples-nacional-e-abertura-de-empresa/); [ContaÁgil](https://www.contaagil.com/consulta-cnae/cnae/?cod=9311500); [Guia Serviços](https://codigos.guiaservicos.com/2019/07/cnae-9311500-gestao-de-instalacoes-de.html)
-- A Simples guide lists academias under "serviços gerais" in Anexo III, with a 6.0% initial rate — [Jornal Contábil](https://jornalcontabil.com.br/noticia/anexos-do-simples-nacional-descubra-em-qual-a-sua-empresa-se-enquadra/)
+- A Simples guide lists academias under "serviços gerais" in Anexo III, with a 6.0% initial rate. The extract did not say which of these guides — [Contabilidade.com – Anexos 2026](https://contabilidade.com/blog/anexos-do-simples-nacional-2026-o-que-cada-anexo-cobre-aliquota-inicial-e-exemplos-por-atividade/) / [Jornal Contábil](https://jornalcontabil.com.br/noticia/anexos-do-simples-nacional-descubra-em-qual-a-sua-empresa-se-enquadra/)
 - **Anexo III table for 2026** (receita bruta in the last 12 months, RBT12):
 
   | Faixa | RBT12 | Alíquota nominal | Parcela a deduzir |
@@ -341,7 +341,7 @@ CNAE **9311-5/00 (Gestão de instalações de esportes)** is taxed under **Simpl
   | 6ª | R$ 3,600,000.01–4,800,000 | 33.00% | R$ 648,000 |
 
   Sources: [Consulta Simples Nacional – Tabela 2026](https://www.consultasimplesnacional.com.br/guias/tabela-simples-nacional-2026/); [ContaJá – Anexo III 2026](https://contaja.com.br/blog/anexo-iii-do-simples-nacional/); [Conube – Anexo 3](https://conube.com.br/blog/anexo-3-tabela-simples-nacional/); [ContaÁgil – Anexo III 2026](https://www.contaagil.com/contabilidade-digital/anexo-3-do-simples-nacional-atualizado/)
-- The effective rate is (RBT12 × nominal rate − parcela a deduzir) ÷ RBT12. Worked example: RBT12 of R$ 300k gives 8.08% — [ContaJá](https://contaja.com.br/blog/tabela-simples-nacional/)
+- The effective rate is (RBT12 × nominal rate − parcela a deduzir) ÷ RBT12. Worked example: RBT12 of R$ 300k gives 8.08%. This came from one of the table sources above, probably [ContaJá](https://contaja.com.br/blog/tabela-simples-nacional/); the extract did not say which.
 - One source says Simples rates did not change in 2026 and that Reforma Tributária changes to the regime take effect from **2027** — [Contmatic](https://simplifique.contmatic.com.br/blogs/simples-nacional-tabela-2026-aliquotas-faixas-faturamento) / [Consulta Simples Nacional](https://www.consultasimplesnacional.com.br/guias/tabela-simples-nacional-2026/) (the search extract did not say which)
 
 ### Inferences
