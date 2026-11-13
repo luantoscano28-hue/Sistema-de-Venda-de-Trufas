@@ -232,7 +232,7 @@
             <div><label for="email">E-mail</label>
               <input id="email" name="email" type="email" autocomplete="email" required></div>
           </div>
-          <p class="pequeno suave" style="margin-top:10px">Usamos seus dados só para avisar se você ganhar e para você achar seus números depois. Seu nome aparece abreviado na lista pública.</p>
+          <p class="pequeno suave" style="margin-top:10px">Seu nome, telefone e e-mail <b>nunca aparecem em público</b>. Na lista pública você é só um código. Usamos seus dados apenas para avisar se você ganhar e para você achar seus números depois.</p>
           <p class="erro" role="alert"></p>
           <button type="submit" class="largo">Reservar e pagar com Pix</button>
           <p class="pequeno suave centro" style="margin-top:8px">Os números ficam guardados por ${config.reserva_minutos} minutos enquanto você paga.</p>
@@ -348,6 +348,7 @@
         }
         return `${topo}<div class="cartao"><h2>Seus números</h2>${numeros}
           <p class="pequeno suave">Pago em ${data(p.pago_em)} · ${reais(p.valor_centavos)} · Pedido ${esc(p.id)}</p>
+          <p class="pequeno">🔒 Na lista pública você aparece só como <b>Comprador ${esc(p.codigo_publico)}</b>. Seu nome e telefone não são mostrados.</p>
           <div class="linha-botoes">
             <a class="botao secundario" href="#/conferir/${esc(p.rifa.slug)}">Ver registro público</a>
             <button class="secundario" id="copiar-link">Copiar link do comprovante</button>
@@ -432,12 +433,12 @@
   // ---------- Conferir (auditoria pública) ----------
   const FRASES = {
     rifa_criada: (d) => `Rifa criada: ${d.total_numeros} números a ${reais(d.preco_centavos)}. Mínimo para valer: ${d.minimo_numeros}. Taxa da plataforma: ${porcento(d.taxa_percentual)}.`,
-    pagamento: (d) => `${d.comprador} pagou ${reais(d.valor_centavos)} pelos números ${d.numeros.join(', ')}.`,
+    pagamento: (d) => `Comprador ${d.comprador} pagou ${reais(d.valor_centavos)} pelos números ${d.numeros.join(', ')}.`,
     estorno: (d) => `Devolução de ${reais(d.valor_centavos)} (números ${d.numeros.join(', ')}). Motivo: ${d.motivo}`,
     estorno_concluido: (d) => `Devolução de ${reais(d.valor_centavos)} concluída.`,
     rifa_cancelada: (d) => `Rifa cancelada. ${d.motivo} ${d.pedidos_devolvidos} compra(s) devolvida(s).`,
     encerramento: (d) => `Vendas encerradas com ${d.total_pagos} números pagos. Lista fechada. O sorteio vai usar a rodada ${d.rodada_drand} do drand, que ainda não tinha saído.`,
-    sorteio: (d) => `Sorteio feito. Número ganhador: ${d.numero_ganhador} (${d.ganhador}). Arrecadado: ${reais(d.arrecadado_centavos)}. Organizador: ${reais(d.repasse_organizador_centavos)}. Plataforma: ${reais(d.taxa_plataforma_centavos)}.`,
+    sorteio: (d) => `Sorteio feito. Número ganhador: ${d.numero_ganhador} (Comprador ${d.ganhador}). Arrecadado: ${reais(d.arrecadado_centavos)}. Organizador: ${reais(d.repasse_organizador_centavos)}. Plataforma: ${reais(d.taxa_plataforma_centavos)}.`,
     premio_recebido: () => 'O ganhador confirmou que recebeu o prêmio. Pagamento ao organizador liberado.',
     repasse_liberado: () => 'A plataforma liberou o pagamento ao organizador.',
     repasse_pago: (d) => `Pagamento de ${reais(d.repasse_organizador_centavos)} feito ao organizador.`,
@@ -481,9 +482,10 @@
         }).join('')}</ol>
         <p class="pequeno suave" style="margin-top:10px">O código embaixo de cada linha é a "impressão digital" dela, calculada junto com a linha anterior. Se alguém mudasse qualquer coisa no passado, todos os códigos seguintes mudariam. Quer garantia extra? Anote o último código: ele tem que continuar aparecendo aqui.</p></div>
       <div class="cartao"><h2>Números pagos (${pagos.length})</h2>
-        ${pagos.length ? `<div class="rolagem"><table><tr><th>Número</th><th>Comprador</th><th>Telefone</th></tr>
-          ${a.compradores.map((c) => `<tr><td><b>${num(c.numero, r.total_numeros)}</b>${sorteada && c.numero === r.numero_ganhador ? ' 🏆' : ''}</td><td>${esc(c.nome)}</td><td>${esc(c.telefone)}</td></tr>`).join('')}
-        </table></div>` : '<p class="suave">Nenhum número pago ainda.</p>'}</div>`;
+        ${pagos.length ? `<div class="rolagem"><table><tr><th>Número</th><th>Comprador (código)</th></tr>
+          ${a.compradores.map((c) => `<tr><td><b>${num(c.numero, r.total_numeros)}</b>${sorteada && c.numero === r.numero_ganhador ? ' 🏆' : ''}</td><td>${esc(c.comprador)}</td></tr>`).join('')}
+        </table></div>
+        <p class="pequeno suave" style="margin-top:10px">Para proteger quem compra, cada pessoa aparece só como um código. O seu código está no seu comprovante.</p>` : '<p class="suave">Nenhum número pago ainda.</p>'}</div>`;
 
     const marcar = (id, classe, texto) => {
       const li = document.getElementById(id);
@@ -573,6 +575,7 @@
         <details><summary>Posso desistir?</summary><p>Pode. Em até 7 dias depois do pagamento, enquanto a rifa estiver vendendo, abra seu comprovante e toque em "Quero meu dinheiro de volta". Devolvemos o valor inteiro no Pix. Depois que as vendas encerram, não dá mais.</p></details>
         <details><summary>E se a rifa for cancelada?</summary><p>Toda rifa tem um mínimo de números para valer. Se não vender o mínimo até a data, ou se o organizador cancelar, todo mundo recebe o valor inteiro de volta, automaticamente, na conta que fez o Pix.</p></details>
         <details><summary>Como sei que o sorteio é honesto?</summary><p>O sorteio não é feito por uma pessoa. A lista de números é fechada e publicada <b>antes</b> de existir o número que decide o ganhador. Esse número vem de uma rede pública internacional (drand), que ninguém controla. Na página "Conferir" de cada rifa, seu próprio celular refaz a conta e mostra se bate.</p></details>
+        <details><summary>Meu nome aparece para todo mundo?</summary><p>Não. Em público você é só um código (por exemplo, "Comprador 482913"). Seu nome, telefone e e-mail ficam guardados e só são vistos pelo organizador se você ganhar, para combinar a entrega do prêmio.</p></details>
         <details><summary>Como acho meus números depois?</summary><p>Em <a href="#/meus-numeros">Meus números</a>, com o WhatsApp e o e-mail da compra. Ou guarde o link do comprovante.</p></details>
         <details><summary>E se eu ganhar?</summary><p>Seu comprovante mostra "Você ganhou" e o organizador entra em contato. O organizador <b>só recebe o dinheiro da rifa depois que você confirmar que recebeu o prêmio</b>.</p></details>
       </div>

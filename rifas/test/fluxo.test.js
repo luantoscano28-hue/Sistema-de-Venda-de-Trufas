@@ -160,6 +160,13 @@ test('rifa completa: compra, pagamento, sorteio conferível e repasse', async ()
   // Dados pessoais não aparecem na auditoria.
   assert.ok(!JSON.stringify(aud).includes('@teste.com'));
   assert.ok(!JSON.stringify(aud).includes('1199999'));
+  assert.ok(!/Pessoa|Teste\d/.test(JSON.stringify(aud)), 'nenhum nome, nem abreviado');
+  // Cada comprador é só um código; a mesma pessoa mantém o mesmo código na rifa.
+  const codigoDe = (n) => aud.compradores.find((c) => c.numero === n).comprador;
+  assert.match(codigoDe(1), /^\d{6}$/);
+  assert.equal(codigoDe(1), codigoDe(4));
+  assert.notEqual(codigoDe(1), codigoDe(pagos.find((n) => n > 4)));
+  assert.equal(pedidoA.codigo_publico, codigoDe(1));
 
   // Dinheiro: R$ 50 arrecadados, 10% da plataforma.
   assert.equal(aud.rifa.arrecadado_centavos, 5000);

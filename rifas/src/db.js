@@ -67,6 +67,7 @@ function abrirBanco(arquivo) {
       telefone TEXT NOT NULL,
       email TEXT NOT NULL,
       numeros TEXT NOT NULL,                      -- JSON com os números do pedido
+      codigo_publico TEXT NOT NULL DEFAULT '',    -- é isso que aparece em público, no lugar do nome
       valor_centavos INTEGER NOT NULL,
       status TEXT NOT NULL DEFAULT 'reservado',   -- reservado | pago | expirado | estornando | estornado
       pagamento_id TEXT,
@@ -104,6 +105,9 @@ function abrirBanco(arquivo) {
       UNIQUE (rifa_id, seq)
     );
   `);
+  // Bancos criados antes do código público ganham a coluna nova.
+  const colunas = db.prepare('PRAGMA table_info(pedidos)').all().map((c) => c.name);
+  if (!colunas.includes('codigo_publico')) db.exec("ALTER TABLE pedidos ADD COLUMN codigo_publico TEXT NOT NULL DEFAULT ''");
   return db;
 }
 

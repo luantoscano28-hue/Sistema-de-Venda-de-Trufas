@@ -34,11 +34,6 @@ function telefoneValido(v) {
   if (s.length < 10 || s.length > 11) throw new Erro('Telefone inválido. Use DDD + número.');
   return s;
 }
-function mascararNome(nome) {
-  const p = nome.trim().split(/\s+/);
-  return p.length > 1 ? `${p[0]} ${p[p.length - 1][0].toUpperCase()}.` : p[0];
-}
-const mascararTelefone = (t) => `(••) •••••-${t.slice(-4)}`;
 
 function hashSenha(senha, sal = idAleatorio(16)) {
   return `${sal}:${crypto.scryptSync(senha, sal, 32).toString('hex')}`;
@@ -228,14 +223,23 @@ function criarNucleo({ db, provedor, drand, cfg }) {
       }
       numeros.sort((a, b) => a - b);
 
+      // Em público o comprador é só um código. A mesma pessoa mantém o mesmo código dentro da rifa.
+      const anterior = q("SELECT codigo_publico c FROM pedidos WHERE rifa_id = ? AND telefone = ? AND email = ? AND codigo_publico != '' LIMIT 1")
+        .get(rifa.id, telefone, email);
+      let codigo = anterior && anterior.c;
+      while (!codigo) {
+        const tentativa = String(crypto.randomInt(100000, 1000000));
+        if (!q('SELECT 1 FROM pedidos WHERE rifa_id = ? AND codigo_publico = ?').get(rifa.id, tentativa)) codigo = tentativa;
+      }
+
       const p = {
         id: idAleatorio(5), token: idAleatorio(24), rifa_id: rifa.id, nome, telefone, email, numeros,
         valor_centavos: numeros.length * rifa.preco_centavos,
         expira_em: Math.min(agora() + cfg.reservaMinutos * 60000, Math.max(rifa.prazo, agora() + 60000)),
       };
-      q(`INSERT INTO pedidos (id, token, rifa_id, nome, telefone, email, numeros, valor_centavos, expira_em, criado_em)
-         VALUES (?,?,?,?,?,?,?,?,?,?)`)
-        .run(p.id, p.token, p.rifa_id, nome, telefone, email, JSON.stringify(numeros), p.valor_centavos, p.expira_em, agora());
+      q(`INSERT INTO pedidos (id, token, rifa_id, nome, telefone, email, numeros, codigo_publico, valor_centavos, expira_em, criado_em)
+         VALUES (?,?,?,?,?,?,?,?,?,?,?)`)
+        .run(p.id, p.token, p.rifa_id, nome, telefone, email, JSON.stringify(numeros), codigo, p.valor_centavos, p.expira_em, agora());
       const inserir = q('INSERT INTO numeros (rifa_id, numero, pedido_id) VALUES (?,?,?)');
       for (const n of numeros) inserir.run(rifa.id, n, p.id);
       return p;
@@ -285,7 +289,7 @@ function criarNucleo({ db, provedor, drand, cfg }) {
       if (aceitar) {
         q("UPDATE pedidos SET status = 'pago', pago_em = ? WHERE id = ?").run(agora(), p.id);
         registrar(rifa.id, 'pagamento', {
-          pedido: p.id, numeros, valor_centavos: p.valor_centavos, comprador: mascararNome(p.nome),
+          pedido: p.id, numeros, valor_centavos: p.valor_centavos, comprador: p.codigo_publico,
         });
       } else {
         q("UPDATE pedidos SET pago_em = ? WHERE id = ?").run(agora(), p.id);
@@ -314,7 +318,7 @@ function criarNucleo({ db, provedor, drand, cfg }) {
     const r = q('SELECT * FROM rifas WHERE id = ?').get(p.rifa_id);
     const ganhou = r.status === 'sorteada' && r.pedido_ganhador === p.id;
     return {
-      id: p.id, token: p.token, nome: p.nome, numeros: JSON.parse(p.numeros), valor_centavos: p.valor_centavos,
+      id: p.id, token: p.token, nome: p.nome, codigo_publico: p.codigo_publico, numeros: JSON.parse(p.numeros), valor_centavos: p.valor_centavos,
       status: p.status, pix_copia_cola: p.status === 'reservado' ? p.pix_copia_cola : null,
       pix_qr_base64: p.status === 'reservado' ? p.pix_qr_base64 : null,
       expira_em: p.expira_em, pago_em: p.pago_em, estornado_em: p.estornado_em, motivo_estorno: p.motivo_estorno,
@@ -448,7 +452,7 @@ function criarNucleo({ db, provedor, drand, cfg }) {
          WHERE id = ?`).run(agora(), aleatorio, assinatura, g.numero, p.id, arrecadado, taxa, repasse, r.id);
       registrar(r.id, 'sorteio', {
         rodada_drand: r.rodada_drand, aleatorio, semente: g.semente, posicao_na_lista: g.posicao,
-        numero_ganhador: g.numero, pedido: p.id, ganhador: mascararNome(p.nome),
+        numero_ganhador: g.numero, pedido: p.id, ganhador: p.codigo_publico,
         arrecadado_centavos: arrecadado, taxa_plataforma_centavos: taxa, repasse_organizador_centavos: repasse,
       });
     });
@@ -513,7 +517,7 @@ function criarNucleo({ db, provedor, drand, cfg }) {
   function auditoria(slug) {
     const r = rifaPorSlug(slug);
     const linhas = q('SELECT seq, tipo, dados, criado_em, hash_anterior, hash FROM registro WHERE rifa_id = ? ORDER BY seq').all(r.id);
-    const compradores = q(`SELECT n.numero, p.nome, p.telefone FROM numeros n JOIN pedidos p ON p.id = n.pedido_id
+    const compradores = q(`SELECT n.numero, p.codigo_publico FROM numeros n JOIN pedidos p ON p.id = n.pedido_id
                            WHERE n.rifa_id = ? AND p.status = 'pago' ORDER BY n.numero`).all(r.id);
     return {
       rifa: { ...resumoRifa(r), id: r.id, hash_lista: r.hash_lista, rodada_drand: r.rodada_drand,
@@ -521,7 +525,8 @@ function criarNucleo({ db, provedor, drand, cfg }) {
         arrecadado_centavos: r.arrecadado_centavos, taxa_centavos: r.taxa_centavos, repasse_centavos: r.repasse_centavos,
         taxa_percentual: r.taxa_percentual, repasse_status: r.repasse_status },
       registro: linhas.map((l) => ({ ...l })),
-      compradores: compradores.map((c) => ({ numero: c.numero, nome: mascararNome(c.nome), telefone: mascararTelefone(c.telefone) })),
+      // Nome, telefone e e-mail nunca saem daqui: em público vai só o código.
+      compradores: compradores.map((c) => ({ numero: c.numero, comprador: c.codigo_publico })),
     };
   }
 
