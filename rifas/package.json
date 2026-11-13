@@ -1,0 +1,11 @@
+{
+  "name": "rifa-clara",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Plataforma de rifas online com Pix, sorteio conferível e registro público.",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --no-warnings server.js",
+    "test": "node --no-warnings --test"
+  }
+}
